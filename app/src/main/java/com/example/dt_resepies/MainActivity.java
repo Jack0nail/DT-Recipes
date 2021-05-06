@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    String file_name = "Recipe.json";
+    String file_name = "recipe.json";
     ListView listView;
     ArrayList<String> arrayList = new ArrayList<>();
     JSONArray jsonArray;
@@ -41,9 +41,10 @@ public class MainActivity extends AppCompatActivity {
         for (Object object: jsonArray)
         {
             JSONObject jsonObject = (JSONObject) object;
-            String id = (String) jsonObject.get("id");
-            arrayList.add(id);
+            String name = (String) jsonObject.get("name");
+            arrayList.add(name);
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, arrayList);
+            listView.setAdapter(adapter);
         }
     }
 }

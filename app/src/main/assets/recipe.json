@@ -1,5 +1,5 @@
 [{
-  "id": 1 ,
+  "id": "1" ,
   "name": "fried egg",
   "ingredients": [
     "egg",
@@ -9,7 +9,7 @@
   "recipe": "some text"
 },
 {
- "id": 2,
+ "id": "2",
   "name": "Croutons",
   "ingredients": [
     "egg",
@@ -20,7 +20,7 @@
   "recipe": "some text"
 },
   {
-    "id": 3,
+    "id": "3",
     "name": "Chops",
     "ingredients": [
       "chicken",
