@@ -5,8 +5,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.AssetManager;
 
-import org.json.JSONArray;
-//import org.json.simple.parser.JSONParser;
+
+import org.json.simple.JSONArray;
+import org.json.simple.parser.JSONParser;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -21,7 +22,7 @@ class Save_json {
 //    public void writeFile(JSONArray listView, Context context, String file_name) {
 //        try {
 //            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(context.openFileOutput(file_name, MODE_PRIVATE)));
-//            bw.write(listView.toJSONString());
+//            bw.write(listView.JSONString());
 //            bw.close();
 //            System.out.println("zalypa zapisalas");
 //        } catch (
@@ -61,14 +62,14 @@ class Save_json {
         return s;
     }
 
-//    public JSONArray readFile(Context context, String file_name) {
-//        JSONArray jsonstr = new JSONArray();
-//        try {
-//            jsonstr = (JSONArray) new JSONParser().parse(convertStreamToString(new InputStreamReader(context.openFileInput(file_name))));
-//        } catch (Exception e)
-//        {
-//            e.printStackTrace();
-//        }
-//        return jsonstr;
+    public JSONArray readFile(Context context, String file_name) {
+        JSONArray jsonstr = new JSONArray();
+        try {
+            jsonstr = (JSONArray) new JSONParser().parse(convertStreamToString(new InputStreamReader(context.openFileInput(file_name))));
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return jsonstr;
     }
-//}
+}
